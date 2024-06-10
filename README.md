@@ -17,7 +17,7 @@ In many data stream applications, there is a normal concept, and the objective i
 
 ![Twitter](/images/chart_twitter-1.png)
 
-![Interpretability](/images/plots graph twitter-1.png)
+![Interpretability](/images/plots_graph_twitter-1.png)
 
 ![Ablation](/images/Ablation-1.png)
 
