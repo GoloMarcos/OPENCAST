@@ -8,11 +8,13 @@ In many data stream applications, there is a normal concept, and the objective i
 # Results
 
 # Requiriments
- - networkx
- - pandas
- - scikit-learn
- - torch
- - torch-geometric
+ - python == 3.11.8
+ - networkx == 3.2.1
+ - pandas == 2.2.1
+ - numpy == 1.26.4
+ - scikit-learn == 1.4.1
+ - torch == 2.2.2
+ - torch-geometric == 2.5.2
 
 # How to use
 ```
