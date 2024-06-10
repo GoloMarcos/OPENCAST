@@ -15,7 +15,8 @@ In many data stream applications, there is a normal concept, and the objective i
  - torch-geometric
 
 # How to use
-'''
+```
 python3 main_opencast.py --k 1 --dataset electricity --numlayers 1
+
 python3 main_baselines.py --dataset electricity --ocl IsoForest
-'''
+```
