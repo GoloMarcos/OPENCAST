@@ -1,0 +1,17 @@
+networkx
+pandas
+scikit-learn
+matplotlib
+IPython
+ucimlrepo
+plotly
+river
+--find-links https://data.pyg.org/whl/torch-2.2.0+cu121.html
+torch
+pyg_lib
+torch-cluster
+torch-geometric
+torch-scatter
+torch-sparse
+torch-spline-conv
+
