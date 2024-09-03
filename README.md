@@ -29,7 +29,27 @@ python3 main_baselines.py --dataset electricity --ocl IsoForest
 ```
 # How to apply OPENCAST to your datastream dataset
 
+## Adding your dataset to our main file
 
+You must add the name of your dataset in the conditional structures (if-else) to choose the dataset (lines 48 to 62 of the main file). Thus, you can use the name of your dataset as an argument when executing the main file.
+
+## Dataset Format 
+
+Our method expects a dataframe in which the instances are represented by the rows. Each column, except the column with the class, is an attribute of the instances. Our method expects numeric attributes. Example:
+
+| - | Attribute 1 | Attribute 2 | Attribute 3 | Attribute 4 | Attribute 5 | Class |
+| :---: | :---: | :---: | :---: | :---: | :---: | :---: |
+| Instance 1 | 0.1 | 0.2 | 1 | 10 | 0.001 | class_one |
+| Instance 2 | 0.2 | 0.1 | 2 | 6 | 0.01 | class_one |
+| Instance 3 | 0.4 | 0.1 | 7 | 40 | 0.1 | class_two |
+| Instance 4 | 0.9 | 0.2 | 90 | 100 | 0.9 | class_two |
+
+## Code example to add to the main file
+```
+elif args.dataset == 'your_dataset':
+  df = pd.read_pickle('./datasets/file_name_dataset.pkl')
+  interest_class = "class_one" # here you can use the class_one or class_two
+```
 
 # Requirements
  - python == 3.11.8
