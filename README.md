@@ -35,19 +35,19 @@ You must add the name of your dataset in the conditional structures (if-else) to
 
 ## Dataset Format 
 
-Our method expects a dataframe in which the instances are represented by the rows. Each column, except the column with the class, is an attribute of the instances. Our method expects numeric attributes. Example:
+Our method expects a dataframe in which the instances are represented by the rows. Each column is an attribute of the instances, except the column with the class (**the name of this column always has to be class**). Our method expects numeric attributes. Example:
 
-| - | Attribute 1 | Attribute 2 | Attribute 3 | Attribute 4 | Attribute 5 | Class |
+| - | attribute 1 | attribute 2 | attribute 3 | attribute 4 | attribute 5 | class |
 | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| Instance 1 | 0.1 | 0.2 | 1 | 10 | 0.001 | class_one |
-| Instance 2 | 0.2 | 0.1 | 2 | 6 | 0.01 | class_one |
-| Instance 3 | 0.4 | 0.1 | 7 | 40 | 0.1 | class_two |
-| Instance 4 | 0.9 | 0.2 | 90 | 100 | 0.9 | class_two |
+| instance 1 | 0.1 | 0.2 | 1 | 10 | 0.001 | class_one |
+| instance 2 | 0.2 | 0.1 | 2 | 6 | 0.01 | class_one |
+| instance 3 | 0.4 | 0.1 | 7 | 40 | 0.1 | class_two |
+| instance 4 | 0.9 | 0.2 | 90 | 100 | 0.9 | class_two |
 
 ## Code example to add to the main file
 ```
 elif args.dataset == 'your_dataset':
-  df = pd.read_pickle('./datasets/file_name_dataset.pkl')
+  df = pd.read_pickle('./datasets/file_name_dataset.pkl') # You can read a CSV, ARFF, and other files, but you must transform the dataset into a dataframe
   interest_class = "class_one" # here you can use the class_one or class_two
 ```
 
