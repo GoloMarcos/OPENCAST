@@ -50,6 +50,34 @@ elif args.dataset == 'your_dataset':
   df = pd.read_pickle('./datasets/file_name_dataset.pkl') # You can read a CSV, ARFF, and other files, but you must transform the dataset into a dataframe
   interest_class = "class_one" # here you can use the class_one or class_two
 ```
+# Interpretability
+
+To explore the interpretability of OPENCAST, you must run the 2d.ipynb file on your dataset. In the last cell, you can choose the epoch for which you want to plot the embeddings. To generate a video of the learning process, follow the tutorial below:
+```
+import matplotlib.pyplot as plt
+from IPython.display import HTML
+from IPython.display import display
+from matplotlib import animation
+
+def animate(i):
+    embed = embeddings[i].detach().cpu().numpy()
+    r = 0.3
+    ax.clear()
+    ax.scatter(embed[:, 0], embed[:, 1], s=100, c=G.label, cmap="hsv", vmin=-2, vmax=3)
+    ax.scatter(0, 0, s=35, c='red', cmap="hsv", vmin=-2, vmax=3)
+    circle = plt.Circle((0, 0), r, color='red', fill=False)
+    plt.gca().add_artist(circle)
+    plt.title(f'Ep {i} | loss: {losses[i]:.4f} | Rec: 'f'{losses_rec[i]:.4f} | Ocl: 'f'{losses_ocl[i]:.4f} | F1: {accuracies[i]*100:.2f}%', fontsize=13, pad=40)
+    plt.xlim([-1, 1])
+    plt.ylim([-1, 1])
+
+fig = plt.figure(figsize=(8, 8))
+ax = fig.add_subplot()
+anim = animation.FuncAnimation(fig, animate, np.arange(0, epoch, 10), interval=800, repeat=True)
+html = HTML(anim.to_html5_video())
+display(html)
+
+```
 
 # Requirements
  - python == 3.11.8
