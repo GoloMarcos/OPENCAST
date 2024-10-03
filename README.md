@@ -1,8 +1,8 @@
 # One-Class Learning for Data Stream through Graph Neural Networks
 
-- Marcos Gôlo (ICMC/USP) | marcosgolo@usp.br
-- João Gama (Univeridade do Porto) | jgama@fep.up.pt
-- Ricardo Marcacini (ICMC/USP) | ricardo.marcacini@icmc.usp.br
+- Marcos Gôlo (University of São Paulo) | marcosgolo@usp.br
+- João Gama (University of Porto) | jgama@fep.up.pt
+- Ricardo Marcacini (University of São Paulo) | ricardo.marcacini@icmc.usp.br
 
 # Citing:
 
