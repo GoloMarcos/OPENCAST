@@ -63,7 +63,7 @@ def animate(i):
     embed = embeddings[i].detach().cpu().numpy()
     r = 0.3
     ax.clear()
-    ax.scatter(embed[:, 0], embed[:, 1], s=100, c=G.label, cmap="hsv", vmin=-2, vmax=3)
+    ax.scatter(embed[:, 0], embed[:, 1], s=100, c=G.label.detach().cpu().numpy(), cmap="hsv", vmin=-2, vmax=3)
     ax.scatter(0, 0, s=35, c='red', cmap="hsv", vmin=-2, vmax=3)
     circle = plt.Circle((0, 0), r, color='red', fill=False)
     plt.gca().add_artist(circle)
@@ -87,3 +87,6 @@ display(html)
  - scikit-learn == 1.4.1
  - torch == 2.2.2
  - torch-geometric == 2.5.2
+ - plotly
+ - nbformat
+ - matplotlib

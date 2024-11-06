@@ -14,4 +14,4 @@ torch-geometric
 torch-scatter
 torch-sparse
 torch-spline-conv
-
+nbformat
