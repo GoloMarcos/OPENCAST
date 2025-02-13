@@ -12,9 +12,10 @@ If you use any part of this code in your research, please cite it using the foll
   title={One-Class Learning for Data Stream through Graph Neural Networks},
   author={Gôlo, Marcos Paulo Silva and Gama, João and Marcacini, Ricardo Marcondes},
   booktitle={Brazilian Conference on Intelligent Systems},
-  pages={X--X},
+  pages={61--75},
   year={2024},
   organization={Springer}
+}
 }
 ```
 
