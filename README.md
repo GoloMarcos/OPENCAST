@@ -16,7 +16,6 @@ If you use any part of this code in your research, please cite it using the foll
   year={2024},
   organization={Springer}
 }
-}
 ```
 
 # Abstract 
